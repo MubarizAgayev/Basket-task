@@ -87,6 +87,11 @@ $(document).ready(function () {
                 
             }
         })
+        var totalCommon = $(".grand-total span").html()
+        var productTotal = $(this).parent().parent().prev().html()
+        var res = parseFloat(totalCommon) - parseFloat(productTotal)
+
+        $(".grand-total span").html(res)
 
         $(this).parent().parent().parent().remove()
     })
